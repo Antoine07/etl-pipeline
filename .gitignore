@@ -1,0 +1,11 @@
+# Ignore Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+.env
+# pgdata    
+pgdata/
+
+.DS_Store

@@ -1,0 +1,21 @@
+first_name,last_name,id,personal_email,school_email,status,registration_date,school
+Jhon,Doe Joh,doe@gmail.com,doe.doe@site.com,done,28/08/2025,SCHOOL 5
+Marie,Leroy,marie.leroy@@gmail,marie.leroy@school.fr,finished,2025-8-12,SCHOOL_2
+,Martin,,martin@perso.com,,done,12/09/25,SCHOOL 1
+Lucie,Dupont,luciedup,ldupont@@gmail.com,ldupont@edu.fr,completed,09/12/2025,SCHOOL 3
+Mathieu,Durand,matd,matd@gmail.,matd@school,OK,15/13/2025,SCHOOL-4
+Anne,Leclerc,anne.leclerc@gmail.com,anne@school.com,complete,2025/02/30,SCHOOL2
+Tom,Bernard,tbernard@,tom.bernard@school.fr,DONE,01-09-2025,SCHOOL5
+Julie,,julie.dupont@gmail.com,julie.dupont@site,Completed,25/08/25,SCHOOL 1
+Marc,Duval,marc.duval@perso,marc.duval@school.com,yes,10/09/2025,SCHOOL 3
+Amelie,Morel,ameliemorel@gmail.com,,done,,SCHOOL 2
+Pierre,Lefevre,pierre.lefevre@gmail,plefevre@school.fr,done,09/08/2025,SCHOOL_5
+Aline,Bernard,,alinebernard@@gmail.com,aline.bernard@school.com,ok,31/09/2025,SCHOOL3
+Chloe,Petit,chloe.petit@gmail.com,chloe.petit@school.fr,done,2025-09-01,SCHOOL1
+David,,david@gmail,ddavid@school.fr,DONE,2025/09/07,SCHOOL 2
+Luc,Roux,luc.roux@gmail.com,lucroux@school.fr,finished,29/02/2025,SCHOOL4
+Emma,Blanc,emmablanc@gmail.com,emma@school,,done,2025-09-12,SCHOOL 5
+Vincent,Moreau,v.moreau@gmail.com,vmoreau@school.fr,done,,SCHOOL 1
+Julien,Girard,,julien.girard@gmail,Completed,13/09/2025,SCHOOL2
+Sarah,Renard,sarahrenard@perso.com,sarah@school.fr,,2025-08-25,SCHOOL5
+Claire,Richard,clairerichard@gmail.com,,ok,25/25/2025,SCHOOL 3

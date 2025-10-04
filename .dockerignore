@@ -1,0 +1,19 @@
+# Ignore Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+.env
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# README file
+README.md
+
+# Docker compose file
+docker-compose.yml
+
+# requierements file
+requirements.txt
