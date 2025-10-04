@@ -34,3 +34,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           python project/src/run_pipeline.py   # script qui génère data/clean_students.csv
+          git checkout main
+          git add data/clean_students.csv
+          git commit -m "Add cleaned data [ci skip]"
+          git push origin main
