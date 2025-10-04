@@ -1,4 +1,5 @@
 import pandas as pd
+
 from src.etl.transform import clean_data
 
 def test_clean_data_basic():
@@ -20,6 +21,7 @@ def test_clean_data_basic():
         "GPA": [3.8, 2.7],
         "GradeClass": [0, 2]
     }
+    
     df = pd.DataFrame(raw_data)
 
     # --- Act ---
