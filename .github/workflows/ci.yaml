@@ -26,7 +26,7 @@ jobs:
 
       - name: Run ETL unit tests
         run: |
-          pytest tests/ --maxfail=1 --disable-warnings -q
+          pytest project/tests/ --maxfail=1 --disable-warnings -q
 
       - name: Push clean data if tests pass
         if: success()
@@ -34,7 +34,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git checkout -B clean-data
-          python src/run_pipeline.py   # script qui génère data/clean_students.csv
+          python project/src/run_pipeline.py   # script qui génère data/clean_students.csv
           git add data/clean_students.csv
           git commit -m "Update clean data"
           git push -u origin clean-data --force
