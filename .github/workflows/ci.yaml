@@ -3,14 +3,14 @@ name: ETL Unit Tests
 on:
   push:
     branches:
-      - main
+      - raw-data  # pipeline déclenché quand de nouvelles données brutes sont pushées
   workflow_dispatch:
 
 permissions:
   contents: write  # autorise le push automatique
 
 jobs:
-  test-etl:
+  etl:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,12 +31,16 @@ jobs:
         run: |
           pytest project/tests/ --maxfail=1 --disable-warnings -q
 
-      - name: Run ETL pipeline and push clean data
+      - name: Run ETL pipeline and push clean data to main
         if: success()
         run: |
           # Config git
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+
+          # Assurer que nous sommes sur main
+          git fetch origin main
+          git checkout main
 
           # Lancer le pipeline
           python project/src/run_pipeline.py
@@ -44,7 +48,9 @@ jobs:
           # Vérifier que le fichier a bien été créé
           ls -l project/data/
 
-          # Commit et push
+          # Commit seulement si des changements existent
           git add project/data/clean_students.csv
-          git commit -m "Add cleaned student data [auto]"
-          git push origin main
+          git diff --cached --quiet || git commit -m "Update cleaned student data [auto]"
+
+          # Push vers main seulement si commit a été créé
+          git diff --cached --quiet || git push origin main
