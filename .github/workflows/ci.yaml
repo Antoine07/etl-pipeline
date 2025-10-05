@@ -49,6 +49,7 @@ jobs:
           ls -l project/data/
 
           # Commit seulement si des changements existent
+          # git diff --cached --quiet retourne 0 si changements, 1 sinon
           git add project/data/clean_students.csv
           git diff --cached --quiet || git commit -m "Update cleaned student data [auto]"
 
